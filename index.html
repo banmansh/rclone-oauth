@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rclone OAuth client — personal use</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px;
+         font: 16px/1.7 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+         color: #1a1a1a; background: #fff; }
+  h1 { font-size: 1.7rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: #666; margin: 0 0 32px; font-size: 0.95rem; }
+  h2 { font-size: 1.05rem; margin: 32px 0 8px; }
+  ul { padding-left: 1.2em; }
+  li { margin: 6px 0; }
+  code { background: #f2f2f2; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e5e5;
+           color: #888; font-size: 0.85rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #141414; }
+    .sub, footer { color: #999; }
+    code { background: #262626; }
+    footer { border-top-color: #2a2a2a; }
+    a { color: #6cb4ff; }
+  }
+</style>
+</head>
+<body>
+
+<h1>rclone OAuth client</h1>
+<p class="sub">A private, single-user OAuth client for personal Google Drive access.</p>
+
+<h2>What this is</h2>
+<p>
+  This page exists to satisfy Google's OAuth consent screen requirements for a personal
+  OAuth client. There is no product, service, or sign-up here.
+</p>
+<ul>
+  <li>It is a single OAuth 2.0 <strong>Desktop app</strong> client created in Google Cloud Console.</li>
+  <li>It is used by one person, on one privately owned computer, to mount their own
+      Google Drive as a local drive letter using
+      <a href="https://rclone.org/">rclone</a>.</li>
+  <li>It is not distributed, not offered to the public, and has no other users.</li>
+</ul>
+
+<h2>What it accesses</h2>
+<p>
+  Only the files in the owner's own Google Drive account, using the
+  <code>https://www.googleapis.com/auth/drive</code> scope. It reads, writes, and deletes
+  files there at the owner's instruction, exactly as the Google Drive web interface would.
+</p>
+
+<h2>Data handling</h2>
+<p>
+  The OAuth token is stored locally on the owner's computer and is never transmitted to any
+  third party. No analytics, no tracking, no servers of ours are involved.
+  Details are in the <a href="privacy.html">privacy policy</a>.
+</p>
+
+<footer>
+  Last updated: 19 November 2026 &nbsp;·&nbsp;
+  <a href="privacy.html">Privacy policy</a>
+</footer>
+
+</body>
+</html>

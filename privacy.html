@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — rclone OAuth client (personal use)</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px;
+         font: 16px/1.7 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+         color: #1a1a1a; background: #fff; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: #666; margin: 0 0 32px; font-size: 0.95rem; }
+  h2 { font-size: 1.05rem; margin: 28px 0 8px; }
+  ul { padding-left: 1.2em; }
+  li { margin: 6px 0; }
+  code { background: #f2f2f2; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e5e5;
+           color: #888; font-size: 0.85rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #141414; }
+    .sub, footer { color: #999; }
+    code { background: #262626; }
+    footer { border-top-color: #2a2a2a; }
+    a { color: #6cb4ff; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Privacy policy</h1>
+<p class="sub">For a personal, single-user OAuth client used with rclone. Last updated 19 November 2026.</p>
+
+<h2>1. Scope</h2>
+<p>
+  This policy covers a private OAuth 2.0 client ("the client") created by an individual in
+  Google Cloud Console and used solely to access that individual's own Google Drive account
+  through the open-source program <a href="https://rclone.org/">rclone</a>. The client has a
+  single user: its owner. It is not a service offered to anyone else.
+</p>
+
+<h2>2. What data is accessed</h2>
+<p>
+  The client requests the Google Drive scope
+  <code>https://www.googleapis.com/auth/drive</code> and therefore can read, create, modify,
+  and delete files in the owner's own Google Drive, and read file metadata such as names,
+  sizes, and modification times.
+</p>
+
+<h2>3. How the data is used</h2>
+<p>
+  Files and metadata are used only to present the owner's Google Drive as a local drive on the
+  owner's own computer, so that the owner can open, save, and manage their own files with
+  ordinary desktop applications. No other use is made of the data.
+</p>
+
+<h2>4. Where data is stored</h2>
+<ul>
+  <li>OAuth credentials (access and refresh tokens) are stored locally on the owner's computer,
+      in rclone's configuration file.</li>
+  <li>File content is transferred directly between the owner's computer and Google Drive.
+      Transient local cache copies exist only while a file is being written and are deleted
+      after the upload completes.</li>
+  <li>No data is sent to any server operated by the owner of this client. This project
+      operates no servers.</li>
+</ul>
+
+<h2>5. Sharing and third parties</h2>
+<p>
+  No data is sold, rented, shared, or disclosed to any third party. There is no advertising,
+  analytics, tracking, or profiling. The only parties involved in a transfer are the owner's
+  computer and Google's own API endpoints.
+</p>
+
+<h2>6. Retention and deletion</h2>
+<p>
+  Data in Google Drive remains under the owner's control and can be deleted through the Google
+  Drive interface or through the client at any time. Local tokens can be removed by deleting
+  the rclone configuration file. Access can be revoked at any time at
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+</p>
+
+<h2>7. Security</h2>
+<p>
+  Communication with Google uses HTTPS. The refresh token is kept on the owner's local machine
+  and is not published or shared. The client runs with the minimum practical exposure: a single
+  user, a single machine, and no network services of its own.
+</p>
+
+<h2>8. Children</h2>
+<p>
+  The client is not directed at children and is not used by anyone other than its owner.
+</p>
+
+<h2>9. Changes</h2>
+<p>
+  If this policy changes, the updated version will be posted on this page with a new date.
+</p>
+
+<h2>10. Contact</h2>
+<p>
+  Questions about this policy can be raised through the repository that hosts this page.
+</p>
+
+<footer>
+  <a href="./">Home</a> &nbsp;·&nbsp; Last updated 19 November 2026
+</footer>
+
+</body>
+</html>
